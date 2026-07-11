@@ -1,14 +1,19 @@
-import java.util.Scanner;
+// import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args){
 
-        int x = 10;
-        int y = 2;
+        int age = -1;
 
-        x += y;
-
-        System.out.println(x);
+        if(age >= 18){
+            System.out.println("You are an adult");
+        }
+        else if(age < 0){
+            System.out.println("woah u aint even born");
+        }
+        else{
+            System.out.println("You are a kid");
+        }
 
     }
 }
