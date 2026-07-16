@@ -1,23 +1,17 @@
 public class Main {
     public static void main(String[] args) {
 
-        // printf() = is a method used to format the output
-        //
-        // %[flags][width[.precision][specifier-character]
+        // printf() = is a method used to format output
 
-        String name = "Juicewrld";
-        char firstLetter = name.charAt(0);
-        int age = 21;
-        double height = 60.5;
-        boolean isEmployed = true;
+        // %[flags][width][.precision][specifier-character]
 
-        System.out.printf("Hello %s", name);
-        System.out.printf("\nYour name starts with a %c" , firstLetter);
-        System.out.printf("\nYou are %d years old", age);
-        System.out.printf("\nYour are %.2f inches tall", height);
-        System.out.printf("\nEmployed: %b", isEmployed);
+        double price1 = 9.99;
+        double price2 = 100.15;
+        double price3 = -54.01;
 
-        System.out.printf("\n%s is %d years old", name, age);
+        System.out.printf("% .1f\n", price1);
+        System.out.printf("% .1f\n", price2);
+        System.out.printf("% .1f\n", price3);
 
     }
 }
