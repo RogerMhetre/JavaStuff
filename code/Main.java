@@ -1,16 +1,32 @@
 public class Main {
     public static void main(String[] args) {
 
-        int id1 = 1;
-        int id2 = 23;
-        int id3 = 456;
-        int id4 = 7890;
+        boolean isStudent = false;
+        boolean isSenior = true;
+        double price = 9.99;
 
-        System.out.printf("%d\n", id1);
-        System.out.printf("%d\n", id2);
-        System.out.printf("%d\n", id3);
-        System.out.printf("%d\n", id4);
+        if (isStudent) {
+            if (isSenior) {
+                System.out.println("You get a student discount of 20%");
+                System.out.println("You get a senior discount of 10%");
+                price *= 0.7;
+            }
+            else {
+                System.out.println("You get a student discount of 10%");
+                price *= 0.9;
+            }
+        }
+        else {
+            if (isSenior) {
+                System.out.println("You get a senior discount of 20%");
+                price *= 0.8;
+            }
+            else {
+                price *= 1;
+            }
+        }
 
+        System.out.printf("The price of the ticket is $%.2f", price);
 
     }
 }
