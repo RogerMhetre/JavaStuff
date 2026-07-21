@@ -24,7 +24,7 @@ public class CI_calculator {
 
         amount = principal * Math.pow(1 + rate/timesCompounded, timesCompounded * years);
 
-        System.out.printf("The amount after %d years is %.2f", years, amount );
+        System.out.printf("The amount after %d years is %.2f\n", years, amount );
 
         scanner.close();
 
