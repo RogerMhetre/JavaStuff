@@ -21,6 +21,17 @@ public class weight_converter {
             System.out.print("Enter the weight in pounds: ");
             weight = scanner.nextDouble();
             newWeight = weight * 0.453592;
+            System.out.printf("The new weight in kgs is: %.2f kg", newWeight);
+        }
+        else if(choice == 2) {
+            System.out.print("Enter the weight in kgs: ");
+            weight = scanner.nextDouble();
+            newWeight = weight * 2.20462;
+            System.out.printf("The new weight in pounds is: %.2f lbs", newWeight);
+        }
+        else {
+            System.out.println("Goodbye!!!");
+        }
 
         scanner.close();
     }
