@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class logicalOps {
     public static void main(String[] args) {
 
@@ -5,19 +7,22 @@ public class logicalOps {
         // || = OR , either condition must be true
         // ! = NOT , the condition must be false
 
-        double temp = 35;
-        boolean isSunny = false;
+        Scanner scanner = new Scanner(System.in);
 
-        if (temp <=30 && temp >=0 && isSunny) {
-            System.out.println("The weather is good");
-            System.out.println("It is Sunny outside mannn");
-        } else if (temp <=30 && temp >=0 && isSunny) {
-            System.out.println("The weather is good");
-            System.out.println("It is cloudy outside mannn");
-        } else if (temp >30 || temp < 0) {
-            System.out.println("The weather is bad");
+        String username;
+
+        System.out.print("Enter ur username: ");
+        username = scanner.nextLine();
+
+        if (username.length() < 4 || username.length() > 12) {
+            System.out.println("Username must be between 4-12 characters");
+        } else if (username.contains(" ") || username.contains("_")) {
+            System.out.println("Username cannot contain spaces or underscores");
+        }
+        else {
+            System.out.println("Welcome " + username);
         }
 
-
+        scanner.close();
     }
 }
