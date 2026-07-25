@@ -1,30 +1,38 @@
+import java.util.Random;
+import java.util.Scanner;
+
 public class numGuessingGame {
 	public static void main(String[] args) {
-		int secretNumber = 0;
-		int guess = 0;
-		boolean guessed = false;
 
-		System.out.println("Welcome to the number guessing game!");
-		System.out.println("I'm thinking of a number between 1 and 100.");
-		System.out.println("Can you guess what it is?");
+        Random rand = new Random();
+        Scanner scanner = new Scanner(System.in);
 
-		while (guessed == false) {
-			System.out.print("Guess: ");
-			guess = input.nextInt();
+        int guess = 0;
+        int attempts = 0;
+        int secretNumber = rand.nextInt(1, 101);
 
-			if (guess == secretNumber) {
-				System.out.println("You guessed right!");
-				guessed = true;
-			} else if (guess < secretNumber) {
-				System.out.println("Your guess is too low.");
-			} else if (guess > secretNumber) {
-				System.out.println("Your guess is too high.");
-			}
-		}
-		if (guess == secretNumber) {
-			System.out.println("You win!");
-		} else {
-			System.out.println("You lose.");
-		}
+        System.out.println("Welcome to the number guessing game!");
+        System.out.println("I'm thinking of a number between 1 and 100.");
+        System.out.println("Can you guess what it is?");
+        System.out.println();
+
+
+        do{
+            System.out.print("Guess: ");
+            guess  = scanner.nextInt();
+            attempts++;
+            if (guess < secretNumber) {
+                System.out.println("Too low!");
+            } else if (guess > secretNumber) {
+                System.out.println("Too high!");
+            } else {
+                System.out.println("CORRECT!!! The number was " + secretNumber);
+                System.out.println("You guessed " + attempts + " times.");
+            }
+
+        } while (guess != secretNumber);
+
+
+        scanner.close();
 	}
 }
