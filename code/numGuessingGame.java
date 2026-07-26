@@ -9,10 +9,12 @@ public class numGuessingGame {
 
         int guess = 0;
         int attempts = 0;
-        int secretNumber = rand.nextInt(1, 101);
+        int min = 1;
+        int max = 100;
+        int secretNumber = rand.nextInt(min, max + 1);
 
         System.out.println("Welcome to the number guessing game!");
-        System.out.println("I'm thinking of a number between 1 and 100.");
+        System.out.printf("I'm thinking of a number between %d and %d.\n", min, max);
         System.out.println("Can you guess what it is?");
         System.out.println();
 
