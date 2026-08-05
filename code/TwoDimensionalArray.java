@@ -1,18 +1,16 @@
 public class TwoDimensionalArray{
     public static void main(String args[]){
 
-        String[][] groceries = {{"apple", "orange", "banana", "grape"},
-                                {"carrot", "potato", "tomato", "cucumber"},
-                                {"chicken", "beef", "fish", "lamb"}};
+        char[][] telephone = {{'1','2','3'},
+                              {'4','5','6'},
+                              {'7','8','9'},
+                              {'*','0','#'}};
 
-        groceries[0][0] = "pineapple";
-
-        for(String[] foods : groceries){
-            for(String food : foods){
-                System.out.print(food+ " ");
+        for(char[] row : telephone){
+            for(char number : row){
+                System.out.print(number + " ");
             }
             System.out.println();
         }
-
     }
 }
