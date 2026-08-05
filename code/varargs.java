@@ -7,16 +7,21 @@ public class varargs {
         //          ... (ellipsis) is a special character that indicates that
         //              the arguments are to be packed into an array
 
-        System.out.println(add(1,2,3,4,5,6,7,8,9,10));
+        System.out.println(average(1,2,3,4,5,6,7,8,9,10));
+
     }
-    static int add(int... numbers){
+    static double average(double... numbers){
 
-        int sum = 0;
+        double sum = 0;
 
-        for(int number : numbers){
+        if(numbers.length == 0){
+            return 0;
+        }
+
+        for(double number : numbers){
             sum += number;
         }
 
-        return sum;
+        return sum/numbers.length;
     }
 }
