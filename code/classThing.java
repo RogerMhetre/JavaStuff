@@ -1,11 +1,11 @@
 public class classThing{
     public static void main(String[] args){
 
-        Car car1 = new Car();
-        Car car2 = new Car();
+        Student student1 = new Student("Roger", 17, 3.5);
+        Student student2 = new Student("Sujay", 19, 4.0);
 
-        System.out.println(car1.make + " " + car1.model);
-        System.out.println(car2.make + " " + car2.model);
+        System.out.println(student1.name);
+        System.out.println(student2.name);
 
     }
 }

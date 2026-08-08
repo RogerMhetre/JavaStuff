@@ -1,6 +1,27 @@
 public class constructor {
     public static void main(String[] args) {
 
+        // Student class
+
+        // public class Student {
+        //
+        //     String name;
+        //     int age;
+        //     double gpa;
+        //     boolean isEnrolled;
+        //
+        //     Student(String name, int age, double gpa){
+        //         this.name = name;
+        //         this.age = age;
+        //         this.gpa = gpa;
+        //         this.isEnrolled = true;
+        //     }
+        //
+        //     void study(){
+        //         System.out.println(this.name + " is studying");
+        //     }
+        // }
+
         Student student1 = new Student("Roger", 17, 3.5);
         Student student2 = new Student("Juice", 21, 4.0);
         Student student3 = new Student("Drake", 39, 4.5);
