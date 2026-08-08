@@ -1,5 +1,7 @@
 public class User {
 
+    //this class is being used as an example in overloadedConst.java
+
     String username;
     String email;
     int age;
