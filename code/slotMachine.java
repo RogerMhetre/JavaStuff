@@ -8,11 +8,12 @@ public class slotMachine{
         int balance = 100;
         int bet = 0;
         int payout = 0;
+        String playAgain;
         String [] row;
 
         System.out.println("=====================");
         System.out.println("Welcome to Java Slots");
-        // System.out.println("Symbols: ◎ ☘ ☢ ♕ ♠ ♥ ♦ ♣ ♤ ♧ ♢ ☼ ☻ ☹ ✪ ✫ ✯ ✰ ✦ ✧ ✨ ❤ ❣ ❦ ❧ ❨ ❩ ❪ ❫ ❬ ❭ ❮ ❯ ⭐ 💎 🍀 💰 👑 🎰 🏆 🪙 💵 7️⃣ 🌟");
+        // System.out.println("Symbols: ◎ ☘ ☢ ♕ ♠ ♥ ♦ ♣ ♤ ♧ ♢ ☼ ☻ ☹ ✪ ✫ ✯ ✰ ✦ ✧ ✨ ❤ ❣ ❦ ");
         System.out.println("Symbols: ✪ ◎ ☘ ☢ ♕ ♠ ♥");
         System.out.println("=====================");
 
@@ -20,6 +21,7 @@ public class slotMachine{
             System.out.println("Current balance: $" + balance);
             System.out.print("Place your bet amount: ");
             bet = scanner.nextInt();
+            scanner.nextLine();
 
             if(bet > balance){
                 System.out.println("INSUFFICIENT FUNDS");
@@ -47,7 +49,16 @@ public class slotMachine{
                 System.out.println("You lost");
             }
 
+            System.out.print("Do you want to play again?(y/n): ");
+            playAgain = scanner.next().toLowerCase();
+
+            if(!playAgain.equals("y")){
+                break;
+            }
+
         }
+
+        System.out.println("GAME OVER !! Your final balance is $" + balance);
 
     }
     static String[] spinRow(){
@@ -83,9 +94,19 @@ public class slotMachine{
             return switch(row[0]){
             case "✪" -> bet * 2;
             case "☘" -> bet * 3;
-            case "♥" -> bet * 3;
-            case "♕" -> bet * 4;
-            case "♠" -> bet * 4;
+            case "♥" -> bet * 4;
+            case "♕" -> bet * 5;
+            case "♠" -> bet * 10;
+            default -> 0;
+            };
+        }
+        else if(row[1].equals(row[2])){
+            return switch(row[1]){
+            case "✪" -> bet * 2;
+            case "☘" -> bet * 3;
+            case "♥" -> bet * 4;
+            case "♕" -> bet * 5;
+            case "♠" -> bet * 10;
             default -> 0;
             };
         }
