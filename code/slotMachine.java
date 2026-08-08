@@ -60,6 +60,7 @@ public class slotMachine{
 
         System.out.println("GAME OVER !! Your final balance is $" + balance);
 
+        scanner.close();
     }
     static String[] spinRow(){
 
