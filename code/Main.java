@@ -1,31 +1,32 @@
-class Car {
-    String brand;
-    int price;
+import java.util.Vector;
+import java.util.Scanner;
 
-    void display(){
-        System.out.println("Car brand: " + this.brand);
-        System.out.println("Car price: " + "$" + this.price);
-    }
-}
-
-class Main {
+public class Main {
     public static void main(String[] args) {
-        Car car1 = new Car();
-        Car car2 = new Car();
+        Scanner scanner = new Scanner(System.in);
 
-        car1.brand = "Challenger";
-        car1.price = 30000;
-        car1.display();
+        Vector<Integer> v = new Vector<Integer>();
 
-        car2.brand = "Corvette";
-        car2.price = 25000;
-        car2.display();
+        v.add(10);
+        v.add(25);
+        v.add(35);
+        v.add(50);
+        v.add(75);
 
-        int a = 1;
+        System.out.print("Enter a number to search: ");
+        int n = scanner.nextInt();
 
-        switch(a){
-            case 1 -> System.out.println("a is 1");
-            case 2 -> System.out.println("a is 2");
+        for(int i = 0; i < v.size(); i++){
+            if(v.get(i).equals(n)){
+                System.out.println("Element found at index " + i);
+                break;
+            }
         }
+
+        if(!v.contains(n)){
+            System.out.println("Element not found");
+        }
+
+        scanner.close();
     }
 }
