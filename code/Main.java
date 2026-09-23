@@ -1,32 +1,27 @@
 import java.util.Vector;
 import java.util.Scanner;
 
-public class Main {
+class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
         Vector<Integer> v = new Vector<Integer>();
+        Scanner sc = new Scanner(System.in);
 
         v.add(10);
-        v.add(25);
-        v.add(35);
+        v.add(20);
+        v.add(30);
+        v.add(40);
         v.add(50);
-        v.add(75);
 
-        System.out.print("Enter a number to search: ");
-        int n = scanner.nextInt();
+        System.out.print("Enter element to search: ");
+        int n = sc.nextInt();
 
-        for(int i = 0; i < v.size(); i++){
-            if(v.get(i).equals(n)){
-                System.out.println("Element found at index " + i);
-                break;
-            }
-        }
-
-        if(!v.contains(n)){
+        if (v.contains(n)) {
+            System.out.println("Element found at index: " + v.indexOf(n));
+        } else {
             System.out.println("Element not found");
         }
 
-        scanner.close();
+        sc.close();
     }
 }
